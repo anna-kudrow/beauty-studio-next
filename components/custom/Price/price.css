@@ -1,0 +1,188 @@
+.price {
+  padding: 30px 3.5% 90px 15%;
+}
+
+.price__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.price__card {
+  padding: 30px 25px;
+  min-width: 260px;
+  max-width: 350px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 435px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 2px 7px 4px 0px
+    rgba(185, 147, 214, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: linear-gradient(
+    to bottom right,
+    #faf9fe 0%,
+    #faf9fe 18%,
+    #f2f0fb 36%,
+    #e3d2f5 64%,
+    #cdb2e1 86%
+  );
+}
+
+.price__card:hover {
+  transition: transform 0.8s, filter 0.5s;
+  transform: scale(1.01);
+  filter: drop-shadow(3px 5px 11px rgb(148, 119, 148));
+}
+
+.title__service {
+  font-family: "Forum", serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: block;
+  color: var(--main-text);
+}
+
+.title__master {
+  color: var(--main-text);
+  font-family: "Involve", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.card__title {
+  margin-bottom: 50px;
+}
+
+.services__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 50px;
+}
+
+.price-box {
+  padding: 45px 5px 45px 15px;
+}
+
+.price-table {
+  display: grid;
+  grid-template-columns: 45% 13% 13% 13% 13%;
+  grid-template-rows: auto;
+  align-items: center;
+  row-gap: 7px;
+  margin-bottom: 30px;
+}
+
+.price-table__single {
+  grid-template-columns: 70% 20%;
+}
+
+.price-table__length {
+  display: block;
+  font-family: "Involve", sans-serif;
+  color: var(--purple-text);
+  font-size: 7px;
+  text-align: end;
+}
+
+.length1 {
+  grid-column: 2;
+}
+
+.price-table__service,
+.price-table__amount {
+  font-family: "Involve", sans-serif;
+  color: var(--main-text);
+  font-size: 12px;
+  display: block;
+}
+
+.price-table__amount {
+  text-align: end;
+}
+
+.price-from {
+  font-size: 8px;
+}
+
+.title-inner-price {
+  font-family: "Involve", sans-serif;
+  color: var(--purple-text);
+  font-size: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #d0c6f6;
+  margin-bottom: 20px;
+}
+
+.subtitle-inner-price {
+  font-size: 15px;
+  color: var(--purple-text);
+  margin-bottom: 5px;
+}
+
+.additional-price-info {
+  font-size: 8px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1440px) {
+  .price {
+    padding-bottom: 290px;
+    padding-top: 200px;
+  }
+
+  .price-box {
+    padding: 46px 40px 0px 40px;
+  }
+
+  .price-table__service,
+  .price-table__amount {
+    font-size: 20px;
+  }
+
+  .price-table__length {
+    font-size: 14px;
+  }
+
+  .price-table {
+    row-gap: 11px;
+    margin-bottom: 45px;
+  }
+
+  .price-from {
+    font-size: 14px;
+  }
+
+  .title-inner-price {
+    border-top: 2px solid #d0c6f6;
+    padding-top: 35px;
+    font-size: 31px;
+  }
+
+  .subtitle-inner-price {
+    font-size: 21px;
+  }
+
+  .additional-price-info {
+    font-size: 16px;
+    margin-bottom: 45px;
+  }
+
+  .border-price {
+    border: 1px solid #d0c6f6;
+    padding: 30px 80px;
+    margin-bottom: 80px;
+  }
+
+  .price__cards {
+    gap: 60px;
+  }
+}

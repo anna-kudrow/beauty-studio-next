@@ -1,0 +1,12 @@
+.header__menu-toggle {
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 1440px) {
+  .header__menu-toggle {
+    display: none;
+  }
+}

@@ -1,0 +1,29 @@
+.price__button {
+  background-color: var(--light-button-bg);
+  color: var(--main-text);
+  font-family: "Involve";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 15px 20px;
+  border-radius: 20px;
+  box-shadow: 1px 3px 2px 0px rgba(128, 23, 84, 0.4);
+  width: 90%;
+  border: transparent;
+  cursor: pointer;
+}
+
+.price__button:hover {
+  transition: transform 0.8s;
+  transform: scale(1.01);
+}
+
+.price__button:active {
+  background-color: #67268575;
+}
+
+.price__button::after {
+  content: url(/images/Arrow.svg);
+  margin-left: 10px;
+}

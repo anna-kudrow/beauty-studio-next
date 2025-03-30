@@ -1,0 +1,51 @@
+.start-button {
+  font-family: "Involve";
+  color: var(--white);
+  font-size: 14px;
+  line-height: normal;
+  padding: 15px 68px;
+  border-radius: 20px;
+  background: -webkit-linear-gradient(
+    90deg,
+    #ad89d2,
+    #b897d8,
+    #bda0da,
+    #c8ade1,
+    #d7c5e7
+  );
+  background: linear-gradient(
+    90deg,
+    #ad89d2,
+    #b897d8,
+    #bda0da,
+    #c8ade1,
+    #d7c5e7
+  );
+  box-shadow: 1px 1px 4px 3px rgba(185, 147, 214, 0.9) inset;
+  border: transparent;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.start-button:active {
+  background: #a16db5;
+}
+
+@media (min-width: 1440px) {
+  .start-button {
+    width: 327px;
+    height: 61px;
+    padding: 22px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #fff;
+    transition: transform 0.5s;
+    margin-top: 70px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .start-button:hover {
+    transform: scale(1.06);
+  }
+}

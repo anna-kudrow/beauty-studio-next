@@ -1,0 +1,29 @@
+.title-price {
+  color: var(--head-text);
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.subtitle-price {
+  color: var(--purple-text);
+  font-family: "Involve";
+  font-style: normal;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1440px) {
+  .title-price {
+    font-size: 32px;
+  }
+
+  .subtitle-price {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+}

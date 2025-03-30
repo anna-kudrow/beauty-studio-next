@@ -1,10 +1,10 @@
-import { StartButton } from "../../../ui/StartButton/StartButton";
-import { TitlePrice } from "../../../ui/TitlePrice/TitlePrice";
-import "./price.css";
+import { StartButton } from "~/components/custom/StartButton/StartButton";
+import { TitlePrice } from "~/components/custom/TitlePrice/TitlePrice";
+import "~/components/custom/Price/price.css";
 
-export const PhotoshootPrice = () => {
+const PhotoshootPrice = () => {
   return (
-    <>
+    <div className="price-content">
       <div className="price-box">
         <TitlePrice title="Фотосессии под ключ" subtitle="Мастер Анастасия" />
         <div className="border-price">
@@ -28,7 +28,9 @@ export const PhotoshootPrice = () => {
           </div>
         </div>
       </div>
-      <StartButton addClass="flex mx-auto " />
-    </>
+      <StartButton />
+    </div>
   );
 };
+
+export default PhotoshootPrice;

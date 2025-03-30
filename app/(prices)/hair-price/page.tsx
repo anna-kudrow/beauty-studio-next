@@ -5,7 +5,7 @@ import "~/components/custom/Price/price.css";
 export const HairServicePrice = () => {
   // window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   return (
-    <div className="flex flex-col items-center pb-20">
+    <div className="price-content">
       <div className="price-box">
         <TitlePrice title="Парикмахерские услуги" subtitle="Мастер Светлана" />
         <div className="border-price">
@@ -265,7 +265,7 @@ export const HairServicePrice = () => {
           </div>
         </div>
       </div>
-      <StartButton />
+      <StartButton className="flex justify-center" />
     </div>
   );
 };

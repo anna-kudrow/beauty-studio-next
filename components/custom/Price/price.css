@@ -185,4 +185,8 @@
   .price__cards {
     gap: 60px;
   }
+
+  .price-content {
+    padding-bottom: 80px;
+  }
 }

@@ -1,13 +1,12 @@
 import Link from "next/link";
 import "./StartButton.css";
+import { cn } from "~/lib/utils";
 
-type props = {
-  addClass?: string;
-};
-
-export const StartButton = ({ addClass }: props) => {
+export const StartButton = ({
+  className,
+}: { className?: string | undefined }) => {
   return (
-    <Link href="/#form">
+    <Link className={className} href="/#form">
       <button className="start-button" type="button">
         Начать преображение
       </button>

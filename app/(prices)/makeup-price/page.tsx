@@ -1,10 +1,10 @@
-import { StartButton } from "../../../ui/StartButton/StartButton";
-import "./price.css";
-import { TitlePrice } from "../../../ui/TitlePrice/TitlePrice";
+import { StartButton } from "~/components/custom/StartButton/StartButton";
+import { TitlePrice } from "~/components/custom/TitlePrice/TitlePrice";
+import "~/components/custom/Price/price.css";
 
-export const MakeUpPrice = () => {
+const MakeUpPrice = () => {
   return (
-    <>
+    <div className="price-content">
       <div className="price-box">
         <TitlePrice title="Услуги визажиста" subtitle="Мастер Анастасия" />
         <div className="border-price">
@@ -101,7 +101,9 @@ export const MakeUpPrice = () => {
           </p>
         </div>
       </div>
-      <StartButton addClass="flex mx-auto " />
-    </>
+      <StartButton className="flex justify-center" />
+    </div>
   );
 };
+
+export default MakeUpPrice;

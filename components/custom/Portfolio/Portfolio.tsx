@@ -5,12 +5,12 @@ export const Portfolio = () => {
   return (
     <section className="portfolio">
       <div className="portfolio__inner">
-        <h2 id="portfolio" className="about__title title">
+        <h2 id="gallery" className="about__title title">
           Галерея работ
         </h2>
         <ul className="portfolio__list">
           <li className="portfolio__item">
-            <Link href="/weddings">
+            <Link href="/gallery/weddings">
               <h3 className="portfolio__title">Свадьбы</h3>
               <div className="portfolio__cover-img">
                 <img
@@ -21,7 +21,7 @@ export const Portfolio = () => {
             </Link>
           </li>
           <li className="portfolio__item">
-            <Link href="/events">
+            <Link href="/gallery/events">
               <h3 className="portfolio__title">На мероприятия</h3>
               <div className="portfolio__cover-img">
                 <img
@@ -32,7 +32,7 @@ export const Portfolio = () => {
             </Link>
           </li>
           <li className="portfolio__item">
-            <Link href="/hairstyling">
+            <Link href="/gallery/hairstyling">
               <h3 className="portfolio__title">Парикмахерские услуги</h3>
               <div className="portfolio__cover-img">
                 <img
@@ -43,7 +43,7 @@ export const Portfolio = () => {
             </Link>
           </li>
           <li className="portfolio__item">
-            <Link href="/photosessions">
+            <Link href="/gallery/photosessions">
               <h3 className="portfolio__title">Фотосессии под ключ</h3>
               <div className="portfolio__cover-img">
                 <img
@@ -54,7 +54,7 @@ export const Portfolio = () => {
             </Link>
           </li>
           <li className="portfolio__item">
-            <Link href="/backstage">
+            <Link href="/gallery/backstage">
               <h3 className="portfolio__title">Backstage</h3>
               <div className="portfolio__cover-img">
                 <img

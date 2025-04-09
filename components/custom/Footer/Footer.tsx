@@ -67,8 +67,8 @@ export const Footer = () => {
                   8-903-752-25-05
                 </Link>
               </li>
-              <li className="contacts__item ">
-                г. Москва, <br /> ул. Высокая 8, 1 этаж
+              <li className="contacts__item">
+                г. Москва, ул. Высокая д.12, 1 этаж, вход через "Озон"
               </li>
             </ul>
           </div>

@@ -18,7 +18,7 @@ export const ANCORS_DATA = [
     title: "О нас",
   },
   {
-    path: "/#portfolio",
+    path: "/#gallery",
     title: "Галерея",
   },
   {

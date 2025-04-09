@@ -16,7 +16,7 @@ function DesktopNav() {
           </Link>
         </li>
         <li className="desktop-menu__item">
-          <Link href="/#portfolio" className="desktop-menu__link">
+          <Link href="/#gallery" className="desktop-menu__link">
             ГАЛЕРЕЯ
           </Link>
         </li>

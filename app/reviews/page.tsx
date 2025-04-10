@@ -1,10 +1,10 @@
-import { reviews } from "@/lib/reviews";
-import { TitleCarousel } from "@/ui/TitleCarousel";
+import TitleGallery from "~/components/custom/TitleGallery";
+import { reviews } from "~/lib/reviews";
 
-export const Reviews = () => {
+function ReviewsPage() {
   return (
     <div className="p-4">
-      <TitleCarousel text="Часть отзывов клиентов" />
+      <TitleGallery>Часть отзывов клиентов</TitleGallery>
       <div className="grid grid-cols-2 items-center gap-2 pt-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-4">
         {reviews.map((review) => (
           <img
@@ -17,4 +17,6 @@ export const Reviews = () => {
       </div>
     </div>
   );
-};
+}
+
+export default ReviewsPage;

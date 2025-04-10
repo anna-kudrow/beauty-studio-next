@@ -8,6 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 import { Heart } from "lucide-react";
+import TitleGallery from "~/components/custom/TitleGallery";
 
 type ImageType = {
   image: { fields: { file: { url: string | undefined } } };
@@ -59,8 +60,8 @@ function GalleryPage() {
   };
 
   return (
-    <>
-      <h1 className="gallery-title">{title}</h1>
+    <main className="gallery-content">
+      <TitleGallery>{title}</TitleGallery>
       {isLoading ? (
         <div className="loading-box">
           {" "}
@@ -84,7 +85,7 @@ function GalleryPage() {
           ))}
         </div>
       )}
-    </>
+    </main>
   );
 }
 

@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Forum&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Marmelad&display=swap");
 @import "tailwindcss";
-@import "tailwindcss/preflight";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -72,13 +71,14 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-* {
+/* * {
   margin: 0;
   padding: 0;
-}
+} */
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 #root {
@@ -96,11 +96,12 @@ ul {
   list-style-type: none;
 }
 
-.body {
+body {
   max-width: none;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .title {
@@ -196,11 +197,3 @@ ul {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}

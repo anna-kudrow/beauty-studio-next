@@ -8,6 +8,11 @@
   gap: 25px;
 }
 
+.price-content {
+  padding-bottom: 40px;
+  flex-grow: 1;
+}
+
 .price__card {
   padding: 30px 25px;
   min-width: 260px;

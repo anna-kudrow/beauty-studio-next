@@ -28,7 +28,7 @@ const PhotoshootPrice = () => {
           </div>
         </div>
       </div>
-      <StartButton />
+      <StartButton className="flex justify-center" />
     </div>
   );
 };

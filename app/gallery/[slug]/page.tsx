@@ -2,10 +2,12 @@
 
 import "../gallery.css";
 
-import { useQuery } from "@tanstack/react-query";
+import Image from "next/image";
 
+import { useQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
 import { useState } from "react";
+import { Heart } from "lucide-react";
 
 type ImageType = {
   image: { fields: { file: { url: string | undefined } } };
@@ -49,18 +51,39 @@ function GalleryPage() {
     gcTime: 15 * 60 * 1000,
   });
 
+  console.log(photos);
+
+  const formatUrl = (url: string | undefined) => {
+    if (!url) return "/fallback.jpg";
+    return url.startsWith("//") ? `https:${url}` : url;
+  };
+
   return (
     <>
-      <h1>{title}</h1>
-      <div className="gallery-grid">
-        {photos.map((image: ImageType) => (
-          <img
-            key={image.image.fields.file.url}
-            src={image.image.fields.file.url}
-            alt={image.text}
-          />
-        ))}
-      </div>
+      <h1 className="gallery-title">{title}</h1>
+      {isLoading ? (
+        <div className="loading-box">
+          {" "}
+          <Heart className="loading-image heartbeat" />
+        </div>
+      ) : (
+        <div className="gallery-grid">
+          {photos.map((image: ImageType) => (
+            <div
+              className="gallery-image-box"
+              key={image.image.fields.file.url}
+            >
+              {" "}
+              <Image
+                className="gallery-image"
+                src={formatUrl(image.image.fields.file.url)}
+                alt={image.text ?? "image"}
+                fill
+              />
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 }

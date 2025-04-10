@@ -4,12 +4,15 @@ import { useEffect, useRef } from "react";
 import { ANCORS_DATA } from "../../../../lib/const";
 import { MenuItem } from "./MenuItem/MenuItem";
 
-type Props = {
+type ModalMenuProps = {
   modalMenuOpen: boolean;
   setModalMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const ModalMenu = ({ modalMenuOpen, setModalMenuOpen }: Props) => {
+export const ModalMenu = ({
+  modalMenuOpen,
+  setModalMenuOpen,
+}: ModalMenuProps) => {
   const menuRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {

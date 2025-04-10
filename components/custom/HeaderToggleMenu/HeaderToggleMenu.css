@@ -5,8 +5,8 @@
   background-size: cover;
 }
 
-@media (min-width: 1440px) {
-  .header__menu-toggle {
+@media (min-width: 1024px) {
+  .header__menu-toggle-box {
     display: none;
   }
 }

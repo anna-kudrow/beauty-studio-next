@@ -5,7 +5,6 @@
 .desktop-menu__list {
   list-style-type: none;
   display: flex;
-  gap: 50px;
 }
 
 .desktop-menu__link {
@@ -16,10 +15,13 @@
   text-transform: uppercase;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .desktop-menu {
     display: initial;
   }
+  .desktop-menu__list {
+    gap: 15px;
+}
 
   .desktop-menu__link:hover {
     transform: scale(1.06);
@@ -35,3 +37,11 @@
     transition: color 1s;
   }
 }
+
+@media (min-width: 1280px) {
+
+  .desktop-menu__list {
+    gap: 25px;
+  }
+}
+

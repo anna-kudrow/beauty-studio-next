@@ -2,8 +2,7 @@ import { StartButton } from "~/components/custom/StartButton/StartButton";
 import { TitlePrice } from "~/components/custom/TitlePrice/TitlePrice";
 import "~/components/custom/Price/price.css";
 
-export const HairServicePrice = () => {
-  // window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+const HairServicePrice = () => {
   return (
     <div className="price-content">
       <div className="price-box">

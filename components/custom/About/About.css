@@ -1,0 +1,103 @@
+.about {
+  padding: 40px 14px 30px 64px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(236, 212, 250),
+    rgb(244, 214, 231)
+  );
+}
+
+.about__inner {
+  max-width: 550px;
+  margin: 0 auto;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.about__small-title {
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  font-size: 16px;
+}
+
+.about__text {
+  font-size: 16px;
+  line-height: 120%;
+  max-width: 815px;
+  margin-bottom: 20px;
+}
+
+.about__title {
+  margin-bottom: 15px;
+}
+
+.photo-anastasiya-box img,
+.photo-svetlana-box img {
+  width: 100%;
+  border-radius: 4px;
+  height: 240px;
+}
+
+.photo-anastasiya-box,
+.photo-svetlana-box {
+  max-width: 165px;
+  max-height: 240px;
+}
+
+.about__anastasiya {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1440px) {
+  .about {
+    padding: 150px 80px 200px;
+  }
+
+  .about__inner {
+    max-width: none;
+  }
+
+  .about__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about__info-content {
+    width: 460px;
+    order: 1;
+  }
+
+  .about__anastasiya,
+  .about__svetlana {
+    display: flex;
+    gap: 22px;
+  }
+
+  .about__title {
+    margin-bottom: 100px;
+  }
+
+  .about__small-title {
+    font-size: 19px;
+    margin-bottom: 7px;
+  }
+
+  .about__text {
+    font-size: 19px;
+    max-width: 380px;
+  }
+
+  .photo-anastasiya-box img,
+  .photo-svetlana-box img {
+    height: 100%;
+  }
+
+  .photo-anastasiya-box,
+  .photo-svetlana-box {
+    max-width: none;
+    max-height: none;
+    width: 205px;
+    height: 280px;
+  }
+}

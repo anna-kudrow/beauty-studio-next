@@ -1,0 +1,47 @@
+.desktop-menu {
+  display: none;
+}
+
+.desktop-menu__list {
+  list-style-type: none;
+  display: flex;
+}
+
+.desktop-menu__link {
+  color: var(--rouge);
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .desktop-menu {
+    display: initial;
+  }
+  .desktop-menu__list {
+    gap: 15px;
+}
+
+  .desktop-menu__link:hover {
+    transform: scale(1.06);
+  }
+
+  .desktop-menu__item:hover {
+    transform: scale(1.15);
+    transition: transform 1s;
+  }
+
+  .desktop-menu__item:hover .desktop-menu__link {
+    color: rgb(135, 11, 11);
+    transition: color 1s;
+  }
+}
+
+@media (min-width: 1280px) {
+
+  .desktop-menu__list {
+    gap: 25px;
+  }
+}
+

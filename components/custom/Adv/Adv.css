@@ -1,0 +1,142 @@
+.adv {
+  padding: 35px 2.5% 30px;
+}
+
+.adv__title {
+  margin-bottom: 15px;
+  margin-left: 15%;
+}
+
+.adv__list {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.adv__item {
+  background: linear-gradient(
+    157deg,
+    rgba(238, 199, 252, 1) 0%,
+    rgba(187, 184, 227, 1) 35%,
+    rgba(243, 233, 253, 1) 100%
+  );
+  border-radius: 4px;
+  border: 0.8px solid rgba(208, 198, 246, 0.75);
+  padding: 20px;
+  box-sizing: border-box;
+  width: 305px;
+}
+
+.adv__item-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adv__text-bigger {
+  font-size: 16px;
+}
+
+.adv__text {
+  font-size: 13px;
+  line-height: normal;
+}
+
+.adv__text:first-of-type {
+  margin-bottom: 12px;
+}
+
+.adv__info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  list-style-type: disc;
+}
+
+.adv__info-item {
+  font-size: 13px;
+}
+
+.adv__item-photo img {
+  width: 100px;
+  height: 156px;
+  border-radius: 4px;
+  max-width: unset;
+}
+
+.adv__item:nth-child(3) .adv__item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.adv__button {
+  border-radius: 20px;
+  background-color: rgba(54, 54, 54, 0.08);
+  box-shadow: 1px 3px 2px 0px rgba(128, 23, 84, 0.4);
+  border: transparent;
+  color: var(--main-text);
+  font-size: 11px;
+  line-height: normal;
+  padding: 10px;
+  font-size: 11px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.adv__car-icon {
+  width: 30px;
+  height: 35px;
+  background-image: url(/images/car.svg);
+}
+
+@media (min-width: 1440px) {
+  .adv {
+    padding: 200px 70px 135px;
+  }
+  .adv__title {
+    margin-bottom: 100px;
+    text-align: left;
+    margin-left: 25%;
+  }
+
+  .adv__item {
+    width: 560px;
+    height: 300px;
+    padding: 30px;
+  }
+
+  .adv__text {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  .adv__text-bigger {
+    font-size: 23px;
+  }
+
+  .adv__car-icon {
+    width: 50px;
+    height: 55px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .adv__item-photo img {
+    width: 150px;
+    height: 220px;
+  }
+
+  .adv__list {
+    justify-content: space-evenly;
+    gap: 70px;
+    column-gap: 70px;
+  }
+
+  .adv__button {
+    padding: 15px;
+    font-size: 18px;
+    margin-right: unset;
+  }
+}

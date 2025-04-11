@@ -1,0 +1,57 @@
+.achievements {
+  padding: 35px 3.5% 60px 15%;
+}
+
+.achievements__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.achievements__year {
+  color: #000;
+  font-family: "Forum", serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  display: block;
+}
+
+.achievements__item,
+.achievements__summary {
+  color: #000;
+  font-family: "Marmelad", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.achievements__summary {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+  .achievements {
+    padding-top: 200px;
+    padding-bottom: 135px;
+  }
+
+  .achievements__item,
+  .achievements__summary {
+    font-size: 19px;
+  }
+
+  .achievements__year {
+    font-size: 22px;
+    font-weight: 800;
+    display: block;
+    margin-bottom: -15px;
+  }
+
+  .achievements__list {
+    gap: 25px;
+  }
+}

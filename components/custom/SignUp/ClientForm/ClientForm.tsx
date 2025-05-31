@@ -10,20 +10,29 @@ import {
   AlertDialogHeader,
   AlertDialogTrigger,
 } from "~/components/ui/alert-dialog";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "~/components/ui/select";
 import { CHAT_ID, ERROR_MESSAGE, SUCCESS_MESSAGE, URI_API } from "~/lib/const";
 
 export const ClientForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     tel: "",
-    email: "",
+    procedure: "",
   });
 
   const [alert, setAlert] = useState(false);
 
   const [alertMessage, setAlertMessage] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -41,7 +50,7 @@ export const ClientForm = () => {
     const message = `
         <b>Клиент: </b>${formData.name}
         <b>Телефон: </b>${formData.tel}
-        <b>Email: </b>${formData.email}
+        <b>Процедура: </b>${formData.procedure}
     `;
 
     const response = await fetch(URI_API, {
@@ -65,7 +74,7 @@ export const ClientForm = () => {
         ...prevData,
         name: "",
         tel: "",
-        email: "",
+        procedure: "",
       }));
     } else {
       setAlertMessage(ERROR_MESSAGE);
@@ -96,15 +105,22 @@ export const ClientForm = () => {
           onChange={handleChange}
           required
         />
-        <input
-          className="sign-up__input"
-          type="email"
-          name="email"
-          id="email"
-          placeholder="почта"
-          value={formData.email}
-          onChange={handleChange}
-        />
+        <Select>
+          <SelectTrigger className="sign-up__input">
+            <SelectValue placeholder="Выберите процедуру" />
+          </SelectTrigger>
+          <SelectContent
+            className=""
+            value={formData.procedure}
+            onChange={handleChange}
+          >
+            <SelectItem value="Макияж/образ">Макияж/образ</SelectItem>
+            <SelectItem value="Стрижка/окрашивание">
+              Стрижка/окрашивание
+            </SelectItem>
+            <SelectItem value="Фотосессия">Фотосессия</SelectItem>
+          </SelectContent>
+        </Select>
         <AlertDialog>
           <AlertDialogTrigger className="sign-up__btn" type="submit">
             записаться

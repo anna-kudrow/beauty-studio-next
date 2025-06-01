@@ -8,6 +8,7 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+  AlertDialogTitle,
   AlertDialogTrigger,
 } from "~/components/ui/alert-dialog";
 import {
@@ -106,22 +107,20 @@ export const ClientForm = () => {
           required
         />
         <Select>
-          <SelectTrigger className="sign-up__input">
-            <SelectValue placeholder="Выберите процедуру" />
+          <SelectTrigger className="sign-up__input text-[10px] text-[color:var(--light-brown)]">
+            <SelectValue placeholder="процедура" />
           </SelectTrigger>
-          <SelectContent
-            className=""
-            value={formData.procedure}
-            onChange={handleChange}
-          >
-            <SelectItem value="Макияж/образ">Макияж/образ</SelectItem>
-            <SelectItem value="Стрижка/окрашивание">
-              Стрижка/окрашивание
-            </SelectItem>
-            <SelectItem value="Фотосессия">Фотосессия</SelectItem>
+          <SelectContent className="border-none" onSelect={() => handleChange}>
+            <SelectItem value="макияж/образ">макияж/образ</SelectItem>
+            <SelectItem value="стрижка">стрижка волос</SelectItem>
+            <SelectItem value="окрашивание">окрашивание</SelectItem>
+            <SelectItem value="фотосессия">фотосессия</SelectItem>
           </SelectContent>
         </Select>
         <AlertDialog>
+          <AlertDialogTitle className="hidden">
+            Спасибо за обращение, мы свяжемся с вами в ближайшее время
+          </AlertDialogTitle>
           <AlertDialogTrigger className="sign-up__btn" type="submit">
             записаться
           </AlertDialogTrigger>

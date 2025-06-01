@@ -6,7 +6,7 @@ export const StartButton = ({
   className,
 }: { className?: string | undefined }) => {
   return (
-    <Link className={className} href="/#form">
+    <Link className={className} href="/#sign-form">
       <button className="start-button" type="button">
         Начать преображение
       </button>

@@ -34,25 +34,10 @@ export const ClientForm = () => {
       procedure: "",
     },
   });
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   tel: "",
-  //   procedure: "",
-  // });
 
   const [alert, setAlert] = useState(false);
 
   const [alertMessage, setAlertMessage] = useState("");
-
-  // const handleChange = (
-  //   e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-  // ) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     [name]: value,
-  //   }));
-  // };
 
   const handleAlertClose = () => {
     setAlert(false);

@@ -43,7 +43,7 @@
 
 .sign-up__input::placeholder,
 .sign-up__btn {
-  font-family: "Involve";
+  font-family: "Involve", sans-serif;
   font-size: 10px;
   line-height: normal;
   color: var(--light-brown);

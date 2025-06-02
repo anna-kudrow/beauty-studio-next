@@ -1,5 +1,5 @@
 "use client";
-
+import { useForm, Controller } from "react-hook-form";
 import { useState } from "react";
 import {
   AlertDialog,
@@ -8,40 +8,65 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+  AlertDialogTitle,
   AlertDialogTrigger,
 } from "~/components/ui/alert-dialog";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "~/components/ui/select";
 import { CHAT_ID, ERROR_MESSAGE, SUCCESS_MESSAGE, URI_API } from "~/lib/const";
 
 export const ClientForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    tel: "",
-    email: "",
+  const {
+    register,
+    handleSubmit,
+    control,
+    reset,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: "",
+      tel: "",
+      procedure: "",
+    },
   });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   tel: "",
+  //   procedure: "",
+  // });
 
   const [alert, setAlert] = useState(false);
 
   const [alertMessage, setAlertMessage] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+  // const handleChange = (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  // ) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     [name]: value,
+  //   }));
+  // };
 
   const handleAlertClose = () => {
     setAlert(false);
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
+  const onSubmit = async (formData: {
+    name: string;
+    tel: string;
+    procedure: string;
+  }) => {
     const message = `
         <b>Клиент: </b>${formData.name}
         <b>Телефон: </b>${formData.tel}
-        <b>Email: </b>${formData.email}
+        <b>Процедура: </b>${formData.procedure}
     `;
 
     const response = await fetch(URI_API, {
@@ -61,12 +86,7 @@ export const ClientForm = () => {
     if (result.ok) {
       setAlertMessage(SUCCESS_MESSAGE);
       setAlert(true);
-      setFormData((prevData) => ({
-        ...prevData,
-        name: "",
-        tel: "",
-        email: "",
-      }));
+      reset();
     } else {
       setAlertMessage(ERROR_MESSAGE);
       setAlert(true);
@@ -75,37 +95,47 @@ export const ClientForm = () => {
 
   return (
     <>
-      <form className="sign-up__form" id="form" onSubmit={handleSubmit}>
+      <form
+        className="sign-up__form"
+        id="form"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <input
           className="sign-up__input"
           type="text"
-          name="name"
           id="name"
           placeholder="имя"
-          value={formData.name}
-          onChange={handleChange}
-          required
+          {...register("name", { required: true })}
         />
         <input
           className="sign-up__input"
           type="tel"
-          name="tel"
           id="tel"
           placeholder="телефон"
-          value={formData.tel}
-          onChange={handleChange}
-          required
+          {...register("tel", { required: true })}
         />
-        <input
-          className="sign-up__input"
-          type="email"
-          name="email"
-          id="email"
-          placeholder="почта"
-          value={formData.email}
-          onChange={handleChange}
+        <Controller
+          control={control}
+          name="procedure"
+          rules={{ required: true }}
+          render={({ field }) => (
+            <Select onValueChange={field.onChange} value={field.value}>
+              <SelectTrigger className="sign-up__input text-[10px] text-[color:var(--light-brown)]">
+                <SelectValue placeholder="процедура" />
+              </SelectTrigger>
+              <SelectContent className="border-none">
+                <SelectItem value="макияж/образ">макияж/образ</SelectItem>
+                <SelectItem value="стрижка">стрижка волос</SelectItem>
+                <SelectItem value="окрашивание">окрашивание</SelectItem>
+                <SelectItem value="фотосессия">фотосессия</SelectItem>
+              </SelectContent>
+            </Select>
+          )}
         />
         <AlertDialog>
+          <AlertDialogTitle className="hidden">
+            Спасибо за обращение, мы свяжемся с вами в ближайшее время
+          </AlertDialogTitle>
           <AlertDialogTrigger className="sign-up__btn" type="submit">
             записаться
           </AlertDialogTrigger>

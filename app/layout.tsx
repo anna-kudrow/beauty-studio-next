@@ -32,7 +32,6 @@ export default function RootLayout({
       >
         <Header />
         <QueryProvider>{children}</QueryProvider>
-
         <Footer />
       </body>
     </html>

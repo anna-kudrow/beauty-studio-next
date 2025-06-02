@@ -113,6 +113,7 @@ export const ClientForm = () => {
                 <SelectItem value="стрижка">стрижка волос</SelectItem>
                 <SelectItem value="окрашивание">окрашивание</SelectItem>
                 <SelectItem value="фотосессия">фотосессия</SelectItem>
+                <SelectItem value="ресницы">наращивание ресниц</SelectItem>
               </SelectContent>
             </Select>
           )}

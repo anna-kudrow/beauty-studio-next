@@ -12,7 +12,6 @@ import type { NextConfig } from "next";
 //   },
 // };
 
-// export default nextConfig;
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
@@ -22,3 +21,5 @@ const nextConfig: NextConfig = {
     domains: ['images.ctfassets.net'],
   },
 };
+
+export default nextConfig;

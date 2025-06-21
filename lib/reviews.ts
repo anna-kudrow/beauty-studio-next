@@ -123,4 +123,8 @@ export const reviews = [
     src: "/images/reviews/review31.jpg",
     alt: "комментарий клиента 31",
   },
+  {
+    src: "/images/reviews/review32.jpg",
+    alt: "комментарий клиента 32",
+  },
 ];

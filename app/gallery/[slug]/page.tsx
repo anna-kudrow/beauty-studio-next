@@ -107,6 +107,7 @@ function GalleryPage() {
               </DialogTrigger>
               <DialogContent>
                 <Carousel
+                  className="flex items-center justify-center"
                   opts={{
                     align: "center",
                     loop: true,
@@ -115,15 +116,18 @@ function GalleryPage() {
                 >
                   <CarouselContent>
                     {photos.map((image: ImageType, i: number) => (
-                      // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-                      <CarouselItem key={i}>
+                      <CarouselItem
+                        // className="flex items-center justify-center"
+                        // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+                        key={i}
+                      >
                         <Image
                           id={image.image.sys.id}
                           className="carousel-image"
                           src={formatUrl(image.image.fields.file.url)}
                           alt={image.text ?? "image"}
-                          width={800}
-                          height={700}
+                          width={500}
+                          height={750}
                         />
                       </CarouselItem>
                     ))}

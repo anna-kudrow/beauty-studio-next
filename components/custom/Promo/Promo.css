@@ -57,7 +57,7 @@
 
 .promo__title--brown-color {
   display: block;
-  font-family: "Dance";
+  font-family: "Dance", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
@@ -80,7 +80,7 @@
 }
 
 .promo__title-name {
-  font-family: "Involve";
+  font-family: "Involve", sans-serif;
   font-size: 21px;
   line-height: normal;
   color: var(--rouge);

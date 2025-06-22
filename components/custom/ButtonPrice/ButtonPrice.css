@@ -1,7 +1,7 @@
 .price__button {
   background-color: var(--light-button-bg);
   color: var(--main-text);
-  font-family: "Involve";
+  font-family: "Involve", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;

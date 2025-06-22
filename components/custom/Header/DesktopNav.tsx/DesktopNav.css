@@ -21,7 +21,7 @@
   }
   .desktop-menu__list {
     gap: 15px;
-}
+  }
 
   .desktop-menu__link:hover {
     transform: scale(1.06);
@@ -39,9 +39,7 @@
 }
 
 @media (min-width: 1280px) {
-
   .desktop-menu__list {
     gap: 25px;
   }
 }
-

@@ -71,8 +71,6 @@ function GalleryPage() {
     gcTime: 15 * 60 * 1000,
   });
 
-  // console.log(photos);
-
   const formatUrl = (url: string | undefined) => {
     if (!url) return "/fallback.jpg";
     return url.startsWith("//") ? `https:${url}` : url;

@@ -12,8 +12,6 @@ export async function GET(req: NextRequest) {
 
   const slug = searchParams.get("slug");
 
-  console.log(slug);
-
   if (slug) {
     try {
       const response = await client.getEntries({

@@ -6,14 +6,15 @@ type MenuItemProps = {
     path: string;
     title: string;
   };
-  setModalMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  onClick: () => void;
+  // setModalMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const MenuItem = ({ ancorData, setModalMenuOpen }: MenuItemProps) => {
+export const MenuItem = ({ ancorData, onClick }: MenuItemProps) => {
   return (
-    <li className="modal-menu__item">
+    <li className="modal-menu__item" onKeyDown={onClick}>
       <Link
-        onClick={() => setModalMenuOpen(false)}
+        onClick={onClick}
         href={ancorData.path}
         className="modal-menu__link"
       >

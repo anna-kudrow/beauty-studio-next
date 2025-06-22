@@ -4,18 +4,12 @@ import "../gallery.css";
 
 import Image from "next/image";
 
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useQuery } from "@tanstack/react-query";
+import { Heart } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useState } from "react";
-import { Heart } from "lucide-react";
 import TitleGallery from "~/components/custom/TitleGallery";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogTrigger,
-} from "~/components/ui/dialog";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import {
   Carousel,
   CarouselContent,
@@ -23,6 +17,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "~/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "~/components/ui/dialog";
 
 type ImageType = {
   image: {
@@ -105,9 +105,9 @@ function GalleryPage() {
                   />
                 </div>
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent className="flex justify-center">
                 <Carousel
-                  className="flex items-center justify-center"
+                  className="flex max-w-[80vw] items-center justify-center"
                   opts={{
                     align: "center",
                     loop: true,
@@ -117,6 +117,7 @@ function GalleryPage() {
                   <CarouselContent>
                     {photos.map((image: ImageType, i: number) => (
                       <CarouselItem
+                        className="flex justify-center"
                         // className="flex items-center justify-center"
                         // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                         key={i}

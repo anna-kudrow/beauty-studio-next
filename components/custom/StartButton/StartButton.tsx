@@ -1,6 +1,5 @@
 import Link from "next/link";
 import "./StartButton.css";
-import { cn } from "~/lib/utils";
 
 export const StartButton = ({
   className,

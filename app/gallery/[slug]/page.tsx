@@ -105,9 +105,9 @@ function GalleryPage() {
                   />
                 </div>
               </DialogTrigger>
-              <DialogContent className="flex justify-center">
+              <DialogContent className="flex h-fit justify-center">
                 <Carousel
-                  className="flex max-w-[80vw] items-center justify-center"
+                  className="flex h-fit max-w-[80vw] items-center justify-center"
                   opts={{
                     align: "center",
                     loop: true,

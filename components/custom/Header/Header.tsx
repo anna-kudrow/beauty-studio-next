@@ -1,8 +1,8 @@
 import "./Header.css";
-import DesktopNav from "./DesktopNav.tsx/DesktopNav";
-import { HeaderLogo } from "../HeaderLogo/HeaderLogo";
 import Link from "next/link";
+import { HeaderLogo } from "../HeaderLogo/HeaderLogo";
 import { HeaderToggleMenu } from "../HeaderToggleMenu/HeaderToggleMenu";
+import DesktopNav from "./DesktopNav.tsx/DesktopNav";
 
 export const Header = () => {
   return (

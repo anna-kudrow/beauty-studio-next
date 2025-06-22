@@ -4,14 +4,32 @@ import "../gallery.css";
 
 import Image from "next/image";
 
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useQuery } from "@tanstack/react-query";
+import { Heart } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useState } from "react";
-import { Heart } from "lucide-react";
 import TitleGallery from "~/components/custom/TitleGallery";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "~/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "~/components/ui/dialog";
 
 type ImageType = {
-  image: { fields: { file: { url: string | undefined } } };
+  image: {
+    fields: { file: { url: string | undefined } };
+    sys: { id: string };
+    index: number;
+  };
   text: string | undefined;
 };
 
@@ -33,7 +51,8 @@ function GalleryPage() {
     }
   };
 
-  const [title, setTitle] = useState(getTitle());
+  const [title, _] = useState(getTitle());
+  const [activeInd, setActiveInd] = useState<number>(0);
 
   const {
     data: photos = [],
@@ -52,7 +71,7 @@ function GalleryPage() {
     gcTime: 15 * 60 * 1000,
   });
 
-  console.log(photos);
+  // console.log(photos);
 
   const formatUrl = (url: string | undefined) => {
     if (!url) return "/fallback.jpg";
@@ -64,24 +83,61 @@ function GalleryPage() {
       <TitleGallery>{title}</TitleGallery>
       {isLoading ? (
         <div className="loading-box">
-          {" "}
           <Heart className="loading-image heartbeat" />
         </div>
       ) : (
         <div className="gallery-grid">
-          {photos.map((image: ImageType) => (
-            <div
-              className="gallery-image-box"
-              key={image.image.fields.file.url}
-            >
-              {" "}
-              <Image
-                className="gallery-image"
-                src={formatUrl(image.image.fields.file.url)}
-                alt={image.text ?? "image"}
-                fill
-              />
-            </div>
+          {photos.map((image: ImageType, i: number) => (
+            <Dialog key={image.image.fields.file.url}>
+              <VisuallyHidden>
+                <DialogTitle>Open photo</DialogTitle>
+              </VisuallyHidden>
+              <DialogTrigger asChild>
+                <div className="gallery-image-box">
+                  <Image
+                    onClick={() => {
+                      setActiveInd(i);
+                    }}
+                    className="gallery-image"
+                    src={formatUrl(image.image.fields.file.url)}
+                    alt={image.text ?? "image"}
+                    fill
+                  />
+                </div>
+              </DialogTrigger>
+              <DialogContent className="flex h-fit justify-center">
+                <Carousel
+                  className="flex h-fit max-w-[80vw] items-center justify-center"
+                  opts={{
+                    align: "center",
+                    loop: true,
+                    startIndex: activeInd,
+                  }}
+                >
+                  <CarouselContent>
+                    {photos.map((image: ImageType, i: number) => (
+                      <CarouselItem
+                        className="flex justify-center"
+                        // className="flex items-center justify-center"
+                        // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+                        key={i}
+                      >
+                        <Image
+                          id={image.image.sys.id}
+                          className="carousel-image"
+                          src={formatUrl(image.image.fields.file.url)}
+                          alt={image.text ?? "image"}
+                          width={500}
+                          height={750}
+                        />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              </DialogContent>
+            </Dialog>
           ))}
         </div>
       )}

@@ -1,8 +1,8 @@
 "use client";
 import "./HeaderToggleMenu.css";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { ModalMenu } from "../Header/ModalMenu/ModalMenu";
-import { Menu, X } from "lucide-react";
 
 export const HeaderToggleMenu = () => {
   const [modalMenuOpen, setModalMenuOpen] = useState(false);

@@ -1,5 +1,5 @@
-import { createClient } from 'contentful';
-import { type NextRequest, NextResponse } from 'next/server';
+import { createClient } from "contentful";
+import { type NextRequest, NextResponse } from "next/server";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID || "",
@@ -8,25 +8,25 @@ const client = createClient({
 });
 
 export async function GET(req: NextRequest) {
-
   const { searchParams } = new URL(req.url);
-  
+
   const slug = searchParams.get("slug");
 
-  console.log(slug)
+  console.log(slug);
 
-  if (slug) {try {
-    const response = await client.getEntries({
-      content_type: slug,
-    });
-    const data = response.items.map((item) => item.fields);
-    return NextResponse.json(data);
-  } catch (error) {
-    console.error("Contentful fetch error:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch weddings photos" },
-      { status: 500 },
-    );
-  }} 
-
+  if (slug) {
+    try {
+      const response = await client.getEntries({
+        content_type: slug,
+      });
+      const data = response.items.map((item) => item.fields);
+      return NextResponse.json(data);
+    } catch (error) {
+      console.error("Contentful fetch error:", error);
+      return NextResponse.json(
+        { error: "Failed to fetch weddings photos" },
+        { status: 500 },
+      );
+    }
+  }
 }

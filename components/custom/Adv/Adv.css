@@ -93,7 +93,7 @@
 
 @media (min-width: 1440px) {
   .adv {
-    padding: 200px 70px 135px;
+    padding: 0 70px 135px;
   }
   .adv__title {
     margin-bottom: 100px;

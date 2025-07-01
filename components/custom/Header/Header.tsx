@@ -14,10 +14,13 @@ import {
 import { Menu } from "lucide-react";
 import { ANCORS_DATA } from "~/lib/const";
 import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export const Header = () => {
   const [activeAncorPath, setActiveAncorPath] = useState<string>("");
   const menuRef = useRef<HTMLUListElement>(null);
+
+  const router = useRouter();
 
   return (
     <header className="header">
@@ -36,7 +39,17 @@ export const Header = () => {
         <Sheet
           onOpenChange={(open) => {
             setTimeout(() => {
-              if (!open && activeAncorPath !== "") {
+              if (!open && window.location.pathname !== "/") {
+                router.push("/");
+                setTimeout(() => {
+                  window.location.hash = activeAncorPath;
+                }, 300);
+              }
+              if (
+                !open &&
+                activeAncorPath !== "" &&
+                window.location.pathname === "/"
+              ) {
                 window.location.hash = activeAncorPath;
               }
             }, 400);

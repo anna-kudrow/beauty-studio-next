@@ -14,23 +14,23 @@ export const ANCORS_DATA = [
     title: "Главная",
   },
   {
-    path: "/#about",
+    path: "about",
     title: "О нас",
   },
   {
-    path: "/#gallery",
+    path: "gallery",
     title: "Галерея",
   },
   {
-    path: "/#advantages",
+    path: "advantages",
     title: "Преимущества",
   },
   {
-    path: "/#achievments",
+    path: "achievments",
     title: "Достижения",
   },
   {
-    path: "/#services",
+    path: "services",
     title: "Услуги",
   },
 ];

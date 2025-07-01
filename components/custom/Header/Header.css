@@ -43,6 +43,27 @@
   height: 22px;
 }
 
+
+.modal-menu__link {
+  color: var(--rouge);
+  font-family: "Caveat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.modal-menu__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  margin: 36px 0;
+}
+
+
+
 @media (min-width: 768px) {
   .instagram-link {
     width: 27px;

@@ -2,7 +2,6 @@
 import "./HeaderToggleMenu.css";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { ModalMenu } from "../Header/ModalMenu/ModalMenu";
 
 export const HeaderToggleMenu = () => {
   const [modalMenuOpen, setModalMenuOpen] = useState(false);
@@ -31,10 +30,6 @@ export const HeaderToggleMenu = () => {
           </button>
         )}
       </div>
-      <ModalMenu
-      // modalMenuOpen={modalMenuOpen}
-      // setModalMenuOpen={setModalMenuOpen}
-      />
     </div>
   );
 };

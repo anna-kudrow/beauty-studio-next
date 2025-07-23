@@ -1,3 +1,4 @@
+import ScrollUpButton from "~/components/custom/ScrollUpButton/ScrollUpButton";
 import { About } from "../components/custom/About/About";
 import { Achievments } from "../components/custom/Achievments/Achievments";
 import { Adv } from "../components/custom/Adv/Adv";
@@ -16,6 +17,7 @@ export default function Home() {
       <Achievments />
       <Price />
       <SignUp />
+      <ScrollUpButton />
     </main>
   );
 }

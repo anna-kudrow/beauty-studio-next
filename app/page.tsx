@@ -5,6 +5,7 @@ import { Portfolio } from "../components/custom/Portfolio/Portfolio";
 import { Price } from "../components/custom/Price/Price";
 import { Promo } from "../components/custom/Promo/Promo";
 import { SignUp } from "../components/custom/SignUp/SignUp";
+import ScrollUpButton from "~/components/custom/ScrollUpButton/ScrollUpButton";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Achievments />
       <Price />
       <SignUp />
+      <ScrollUpButton />
     </main>
   );
 }

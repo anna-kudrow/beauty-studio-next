@@ -43,7 +43,6 @@
   height: 22px;
 }
 
-
 .modal-menu__link {
   color: var(--rouge);
   font-family: "Caveat", sans-serif;
@@ -61,8 +60,6 @@
   gap: 13px;
   margin: 36px 0;
 }
-
-
 
 @media (min-width: 768px) {
   .instagram-link {

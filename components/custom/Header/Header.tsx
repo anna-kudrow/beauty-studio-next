@@ -1,8 +1,9 @@
 "use client";
 import "./Header.css";
+import { Menu } from "lucide-react";
 import Link from "next/link";
-import { HeaderLogo } from "../HeaderLogo/HeaderLogo";
-import DesktopNav from "./DesktopNav.tsx/DesktopNav";
+import { useRouter } from "next/navigation";
+import { useRef, useState } from "react";
 import {
   Sheet,
   SheetClose,
@@ -11,10 +12,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "~/components/ui/sheet";
-import { Menu } from "lucide-react";
 import { ANCORS_DATA } from "~/lib/const";
-import { useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { HeaderLogo } from "../HeaderLogo/HeaderLogo";
+import DesktopNav from "./DesktopNav.tsx/DesktopNav";
 
 export const Header = () => {
   const [activeAncorPath, setActiveAncorPath] = useState<string>("");

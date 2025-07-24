@@ -1,9 +1,9 @@
 "use client";
 import { Button } from "~/components/ui/button";
 import "./scroll-up-button.css";
+import { useEffect, useState } from "react";
 import CarouselArrow from "~/components/icons/CarouselArrow";
 import { cn } from "~/lib/utils";
-import { useEffect, useState } from "react";
 
 function ScrollUpButton({
   className,

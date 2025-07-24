@@ -7,9 +7,11 @@ import Image from "next/image";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useQuery } from "@tanstack/react-query";
 import { Heart } from "lucide-react";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 import TitleGallery from "~/components/custom/TitleGallery";
+import BackArrow from "~/components/icons/BackArrow";
 import {
   Carousel,
   CarouselContent,
@@ -78,7 +80,17 @@ function GalleryPage() {
 
   return (
     <main className="gallery-content">
-      <TitleGallery>{title}</TitleGallery>
+      <div className="flex items-center justify-between">
+        <TitleGallery>{title}</TitleGallery>
+        <div className="p-4 lg:p-10">
+          <Link href="/#gallery" scroll className="flex items-center">
+            <BackArrow className="lg:w-15" />
+            <div className="flex items-center text-[12px] text-[var(--main-text)] lg:text-[18px]">
+              К галерее
+            </div>
+          </Link>
+        </div>
+      </div>
       {isLoading ? (
         <div className="loading-box">
           <Heart className="loading-image heartbeat" />

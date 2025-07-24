@@ -31,10 +31,10 @@ A modern, responsive website for a beauty studio — built with Next.js 15, and 
 
 ## 🧑‍💻 Scripts
 
-- npm run dev	Start development server (with Turbopack)
-- npm run build	Build the production app
-- npm run lint	Check code with Biome
-- npm run format	Auto-format code with Biome
+- npm run dev -	Start development server (with Turbopack)
+- npm run build	- Build the production app
+- npm run lint - Check code with Biome
+- npm run format -	Auto-format code with Biome
 
 Made with ❤️ for the beauty industry.
 

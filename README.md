@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Beauty Studio Website 💄
 
-## Getting Started
+A modern, responsive website for a beauty studio — built with Next.js 15, and Contentful CMS. The site showcases services, pricing, reviews, and photo galleries of real work, providing a professional online presence for the beauty salon.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- ⚡️ Fast and SEO-friendly (Lighthouse 90+)
+- 💅 Responsive design for all devices
+- 🖼️ Photo gallery of real client work
+- 💬 Client reviews
+- 💰 Services with pricing
+- 🌐 Contentful integration for easy content management
+- 📸 Animations with Animista lybriary.
+- 🧠 Data caching with React Query
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Tech                | Purpose                              |
+|---------------------|--------------------------------------|
+| [Next.js 15](https://nextjs.org/)     | React framework with SSR & SSG |
+| [Contentful](https://www.contentful.com/) | Headless CMS for content editing |
+| [React Query](https://tanstack.com/query/) | Server state & caching |
+| [Lucide Icons](https://lucide.dev/) | Icon set |
+| [Radix UI](https://www.radix-ui.com/) | Accessible UI primitives |
+| [Embla Carousel](https://www.embla-carousel.com/) | Lightweight image slider |
+| [React Hook Form](https://react-hook-form.com/) | Form validation |
+| [BiomJS](https://biomejs.dev/) | Linting and formatting |
+| [gh-pages](https://www.npmjs.com/package/gh-pages) | Deployment to GitHub Pages |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧑‍💻 Scripts
+Command	Description
+npm run dev	Start development server (with Turbopack)
+npm run build	Build the production app
+npm run lint	Check code with Biome
+npm run format	Auto-format code with Biome
 
-To learn more about Next.js, take a look at the following resources:
+Made with ❤️ for the beauty industry.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

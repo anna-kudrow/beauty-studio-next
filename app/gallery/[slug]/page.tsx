@@ -127,8 +127,7 @@ function GalleryPage() {
                   <CarouselContent>
                     {photos.map((image: ImageType, i: number) => (
                       <CarouselItem
-                        className="flex justify-center"
-                        // className="flex items-center justify-center"
+                        className="flex justify-center h-[95vh] w-full"
                         // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                         key={i}
                       >

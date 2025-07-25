@@ -132,8 +132,7 @@ function GalleryPage() {
                         // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                         key={i}
                       >
-                        <div className="relative">
-                          {" "}
+                        <div className="relative h-full">
                           <Image
                             id={image.image.sys.id}
                             className="carousel-image"

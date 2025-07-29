@@ -51,6 +51,8 @@ function GalleryPage() {
         return "Фотосессии под ключ";
       case "backstage":
         return "Backstage";
+      default:
+        ("Галерея");
     }
   };
 

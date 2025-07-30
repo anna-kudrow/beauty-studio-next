@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome check .",
-    "format": "biome check . --write --unsafe",
-    "deploy": "next build && gh-pages -d out"
+    "format": "biome check . --write --unsafe"
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.1.6",

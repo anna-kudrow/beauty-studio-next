@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useQuery } from "@tanstack/react-query";
-import { Heart } from "lucide-react";
+import { Heart, X } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from "react";
@@ -21,6 +21,7 @@ import {
 } from "~/components/ui/carousel";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogTitle,
   DialogTrigger,
@@ -50,6 +51,8 @@ function GalleryPage() {
         return "Фотосессии под ключ";
       case "backstage":
         return "Backstage";
+      default:
+        ("Галерея");
     }
   };
 
@@ -127,19 +130,24 @@ function GalleryPage() {
                   <CarouselContent>
                     {photos.map((image: ImageType, i: number) => (
                       <CarouselItem
-                        className="flex justify-center"
-                        // className="flex items-center justify-center"
+                        className="flex h-[95vh] w-full items-center justify-center"
                         // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                         key={i}
                       >
-                        <Image
-                          id={image.image.sys.id}
-                          className="carousel-image"
-                          src={formatUrl(image.image.fields.file.url)}
-                          alt={image.text ?? "image"}
-                          width={500}
-                          height={750}
-                        />
+                        <div className="relative h-full">
+                          <Image
+                            id={image.image.sys.id}
+                            className="carousel-image"
+                            src={formatUrl(image.image.fields.file.url)}
+                            alt={image.text ?? "image"}
+                            width={500}
+                            height={750}
+                          />
+                          <DialogClose className="absolute top-[1%] right-[1%] z-200 text-white opacity-60">
+                            <VisuallyHidden>Close</VisuallyHidden>
+                            <X className="size-8" />
+                          </DialogClose>
+                        </div>
                       </CarouselItem>
                     ))}
                   </CarouselContent>

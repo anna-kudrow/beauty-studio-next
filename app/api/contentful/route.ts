@@ -22,7 +22,7 @@ export async function GET(req: NextRequest) {
     } catch (error) {
       console.error("Contentful fetch error:", error);
       return NextResponse.json(
-        { error: "Failed to fetch weddings photos" },
+        { error: "Failed to fetch photos" },
         { status: 500 },
       );
     }

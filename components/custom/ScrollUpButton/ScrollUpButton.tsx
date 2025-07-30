@@ -38,7 +38,7 @@ function ScrollUpButton({
       variant="outline"
       className={cn(
         !isVisible && "hidden",
-        "heartbeat fixed right-[5vw] bottom-[15vh] size-14 rounded-full border-none opacity-70",
+        "heartbeat fixed right-[5vw] bottom-[15vh] size-14 cursor-pointer rounded-full border-none opacity-70",
         className,
       )}
     >

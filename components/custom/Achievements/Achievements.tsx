@@ -1,6 +1,6 @@
 import "./achievements.css";
 
-export const Achievments = () => {
+export const Achievements = () => {
   return (
     <section className="achievements" id="achievments">
       <div className="achievements__inner">
@@ -151,6 +151,12 @@ export const Achievments = () => {
                 Мастер класс «Макияж для себя» посвященный международному
                 женскому дню на стенде Самара на выставке «Россия» в ВДНХ,
                 Москва.
+              </li>
+              <li className="achievements__item">
+                <span className="achievements__year">2025Г.</span>
+                <br />
+                Макияж, укладка для ведущих спортивно-музыкального праздника
+                «Достигая цели!» в РЖД Арена, Москва.
               </li>
             </ul>
           </details>

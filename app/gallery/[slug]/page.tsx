@@ -134,10 +134,10 @@ function GalleryPage() {
                         // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                         key={i}
                       >
-                        <div className="relative h-full">
+                        <div className="relative">
                           <Image
                             id={image.image.sys.id}
-                            className="carousel-image"
+                            className="carousel-image max-h-[90vh]"
                             src={formatUrl(image.image.fields.file.url)}
                             alt={image.text ?? "image"}
                             width={500}

@@ -116,6 +116,7 @@ function GalleryPage() {
                     src={formatUrl(image.image.fields.file.url)}
                     alt={image.text ?? "Фото галереи"}
                     fill
+                    priority
                   />
                 </div>
               </DialogTrigger>

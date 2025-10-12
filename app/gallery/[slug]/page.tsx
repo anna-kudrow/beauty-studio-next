@@ -26,6 +26,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "~/components/ui/dialog";
+import ScrollUpButton from "~/components/custom/ScrollUpButton/ScrollUpButton";
 
 type ImageType = {
   image: {
@@ -143,7 +144,7 @@ function GalleryPage() {
                             width={500}
                             height={750}
                           />
-                          <DialogClose className="absolute top-[1%] right-[1%] z-200 text-white opacity-60">
+                          <DialogClose className="absolute top-[1%] right-[1%] z-200 text-white opacity-60 cursor-pointer">
                             <VisuallyHidden>Close</VisuallyHidden>
                             <X className="size-8" />
                           </DialogClose>
@@ -159,6 +160,7 @@ function GalleryPage() {
           ))}
         </div>
       )}
+      <ScrollUpButton />
     </main>
   );
 }

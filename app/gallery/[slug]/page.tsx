@@ -10,6 +10,7 @@ import { Heart, X } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from "react";
+import ScrollUpButton from "~/components/custom/ScrollUpButton/ScrollUpButton";
 import TitleGallery from "~/components/custom/TitleGallery";
 import BackArrow from "~/components/icons/BackArrow";
 import {
@@ -26,7 +27,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "~/components/ui/dialog";
-import ScrollUpButton from "~/components/custom/ScrollUpButton/ScrollUpButton";
 
 type ImageType = {
   image: {
@@ -114,7 +114,7 @@ function GalleryPage() {
                     }}
                     className="gallery-image"
                     src={formatUrl(image.image.fields.file.url)}
-                    alt={image.text ?? "image"}
+                    alt={image.text ?? "Фото галереи"}
                     fill
                   />
                 </div>
@@ -144,7 +144,7 @@ function GalleryPage() {
                             width={500}
                             height={750}
                           />
-                          <DialogClose className="absolute top-[1%] right-[1%] z-200 text-white opacity-60 cursor-pointer">
+                          <DialogClose className="absolute top-[1%] right-[1%] z-200 cursor-pointer text-white opacity-60">
                             <VisuallyHidden>Close</VisuallyHidden>
                             <X className="size-8" />
                           </DialogClose>

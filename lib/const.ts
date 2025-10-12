@@ -35,7 +35,6 @@ export const ANCORS_DATA = [
   },
 ];
 
-
 export const TOKEN = "7653182299:AAG1oW1H3CeFZ2FLeKnuKJFIXVHpqDxsoHI";
 export const CHAT_ID = "-1002417558436";
 export const ERROR_MESSAGE = "Произошла ошибка, попробуйте снова...";

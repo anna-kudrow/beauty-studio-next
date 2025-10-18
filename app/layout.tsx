@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import type { Metadata } from "next";
-import { Caveat } from "next/font/google";
+import { Caveat, Marmelad } from "next/font/google";
 import "./globals.css";
 import { Footer } from "../components/custom/Footer/Footer";
 import { Header } from "../components/custom/Header/Header";
@@ -11,6 +11,12 @@ const caveat = Caveat({
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "block",
+});
+
+const marmelad = Marmelad({
+  variable: "--font-marmelad",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 const dancePartner = localFont({
@@ -38,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${involveMedium.variable} ${dancePartner.variable} ${caveat.variable} antialiased`}
+        className={`${involveMedium.variable} ${dancePartner.variable} ${caveat.variable} ${marmelad.variable} antialiased`}
       >
         <Header />
         <QueryProvider>{children}</QueryProvider>

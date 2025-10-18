@@ -22,7 +22,7 @@
 .achievements__item,
 .achievements__summary {
   color: #000;
-  font-family: "Marmelad", sans-serif;
+  font-family: var(--font-marmelad), sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;

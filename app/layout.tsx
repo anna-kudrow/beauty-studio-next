@@ -1,18 +1,28 @@
+import localFont from "next/font/local";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Caveat } from "next/font/google";
 import "./globals.css";
 import { Footer } from "../components/custom/Footer/Footer";
 import { Header } from "../components/custom/Header/Header";
 import QueryProvider from "./providers/query-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const caveat = Caveat({
+  variable: "--font-caveat",
   subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "block",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const dancePartner = localFont({
+  src: "../fonts/dance_partner.woff2",
+  variable: "--font-dance-partner",
+  display: "block",
+});
+
+const involveMedium = localFont({
+  src: "../fonts/involve_medium.woff2",
+  variable: "--font-involve-medium",
+  display: "block",
 });
 
 export const metadata: Metadata = {
@@ -26,9 +36,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${involveMedium.variable} ${dancePartner.variable} ${caveat.variable} antialiased`}
       >
         <Header />
         <QueryProvider>{children}</QueryProvider>

@@ -54,7 +54,7 @@
 
 .title__master {
   color: var(--main-text);
-  font-family: "Involve", sans-serif;
+  font-family: var(--font-involve-medium), sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -91,7 +91,7 @@
 
 .price-table__length {
   display: block;
-  font-family: "Involve", sans-serif;
+  font-family: var(--font-involve-medium), sans-serif;
   color: var(--purple-text);
   font-size: 7px;
   text-align: end;
@@ -103,7 +103,7 @@
 
 .price-table__service,
 .price-table__amount {
-  font-family: "Involve", sans-serif;
+  font-family: var(--font-involve-medium), sans-serif;
   color: var(--main-text);
   font-size: 12px;
   display: block;
@@ -118,7 +118,7 @@
 }
 
 .title-inner-price {
-  font-family: "Involve", sans-serif;
+  font-family: var(--font-involve-medium), sans-serif;
   color: var(--purple-text);
   font-size: 20px;
   padding-top: 20px;

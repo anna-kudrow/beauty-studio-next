@@ -31,7 +31,7 @@
 .nav__list,
 .social-media__list,
 .contacts__list {
-  font-family: "Involve", sans-serif;
+  font-family: var(--font-involve-medium), sans-serif;
   font-size: 15px;
   line-height: normal;
   display: flex;
@@ -74,7 +74,7 @@
   .nav__list,
   .social-media__list,
   .contacts__list {
-    font-family: "Involve", sans-serif;
+    font-family: var(--font-involve-medium), sans-serif;
     font-size: 17px;
     line-height: normal;
     display: flex;

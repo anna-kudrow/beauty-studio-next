@@ -1,5 +1,5 @@
 .start-button {
-  font-family: "Involve", sans-serif;
+  font-family: var(--font-involve-medium), sans-serif;
   color: var(--white);
   font-size: 14px;
   line-height: normal;

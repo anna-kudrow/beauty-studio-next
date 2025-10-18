@@ -38,6 +38,8 @@ type ImageType = {
 };
 
 function GalleryPage() {
+  const [activeInd, setActiveInd] = useState<number>(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const { slug } = useParams();
 
   const getTitle = () => {
@@ -58,13 +60,8 @@ function GalleryPage() {
   };
 
   const [title, _] = useState(getTitle());
-  const [activeInd, setActiveInd] = useState<number>(0);
 
-  const {
-    data: photos = [],
-    isLoading,
-    error,
-  } = useQuery({
+  const { data: photos = [], isLoading } = useQuery({
     queryKey: ["photos", slug],
     queryFn: async () => {
       const response = await fetch(`/api/contentful?slug=${slug}`);
@@ -136,14 +133,23 @@ function GalleryPage() {
                         // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                         key={i}
                       >
-                        <div className="relative">
+                        <div
+                          className={`relative min-w-[300px] min-h-[300px] ${imageLoaded ? "opacity-100  " : "opacity-40 bg-gray-400"}
+                              
+                               `}
+                        >
                           <Image
                             id={image.image.sys.id}
-                            className="carousel-image max-h-[90vh]"
+                            className={
+                              imageLoaded
+                                ? "carousel-image max-h-[90vh] opacity-100"
+                                : "opacity-0"
+                            }
                             src={formatUrl(image.image.fields.file.url)}
                             alt={image.text ?? "image"}
                             width={500}
                             height={750}
+                            onLoad={() => setImageLoaded(true)}
                           />
                           <DialogClose className="absolute top-[1%] right-[1%] z-200 cursor-pointer text-white opacity-60">
                             <VisuallyHidden>Close</VisuallyHidden>

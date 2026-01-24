@@ -24,7 +24,7 @@
   flex-wrap: wrap;
   gap: 25px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 @media (min-width: 1440px) {

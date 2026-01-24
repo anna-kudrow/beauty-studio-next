@@ -14,7 +14,7 @@ export const Portfolio = () => {
               <h3 className="portfolio__title">Свадьбы</h3>
               <div className="portfolio__cover-img">
                 <img
-                  src="./images/portfolio/weddings/bride1-dancing.jpg"
+                  src="./images/portfolio-cases/bride1-dancing.jpg"
                   alt="Фото обложки блока `Свадьбы`"
                 />
               </div>
@@ -25,7 +25,7 @@ export const Portfolio = () => {
               <h3 className="portfolio__title">На мероприятия</h3>
               <div className="portfolio__cover-img">
                 <img
-                  src="./images/portfolio/events/event-cover.jpg"
+                  src="./images/portfolio-cases/event-cover.jpg"
                   alt="Фото обложки блока `мероприятия`"
                 />
               </div>
@@ -36,7 +36,7 @@ export const Portfolio = () => {
               <h3 className="portfolio__title">Парикмахерские услуги</h3>
               <div className="portfolio__cover-img">
                 <img
-                  src="./images/portfolio/hairstyle/hairstyle-cover.jpg"
+                  src="./images/portfolio-cases/hairstyle-cover.jpg"
                   alt="Фото обложки блока `Парикмахерские услуги`"
                 />
               </div>
@@ -47,7 +47,7 @@ export const Portfolio = () => {
               <h3 className="portfolio__title">Фотосессии под ключ</h3>
               <div className="portfolio__cover-img">
                 <img
-                  src="./images/portfolio/photo-sessions/photosessions-cover.jpg"
+                  src="./images/portfolio-cases/photosessions-cover.jpg"
                   alt="Фото обложки блока `Фотосессии под ключ`"
                 />
               </div>
@@ -58,8 +58,19 @@ export const Portfolio = () => {
               <h3 className="portfolio__title">Backstage</h3>
               <div className="portfolio__cover-img">
                 <img
-                  src="./images/portfolio/backstage/backstage-cover2.jpg"
+                  src="./images/portfolio-cases/backstage-cover2.jpg"
                   alt="Фото обложки блока `Backstage`"
+                />
+              </div>
+            </Link>
+          </li>
+          <li className="portfolio__item">
+            <Link href="/gallery/theater">
+              <h3 className="portfolio__title">Грим и театральные образы</h3>
+              <div className="portfolio__cover-img">
+                <img
+                  src="./images/portfolio-cases/theater-cover.jpg"
+                  alt="Фото обложки блока `Грим и театральные образы`"
                 />
               </div>
             </Link>

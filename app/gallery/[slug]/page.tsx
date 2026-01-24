@@ -54,6 +54,8 @@ function GalleryPage() {
         return "Фотосессии под ключ";
       case "backstage":
         return "Backstage";
+      case "theater":
+        return "Грим и театральные образы";
       default:
         ("Галерея");
     }

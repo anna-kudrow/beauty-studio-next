@@ -59,10 +59,10 @@ html {
   height: 100%;
 }
 
-#root {
+body {
   background-color: var(--primary-background);
   color: var(--main-text);
-  font-family: var(--font-involve-medium), sans-serif;
+  font-family: var(--font-involve-medium), sans-serif; 
   font-size: 16px;
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 .title {
-  font-family: "Caveat", sans-serif;
+  font-family: var(--font-caveat), sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;

@@ -20,15 +20,18 @@ const marmelad = Marmelad({
 });
 
 const dancePartner = localFont({
-  src: "../fonts/dance_partner.woff2",
+  src: "/fonts/dance_partner.woff2",
+  weight: "400",
+  style: "normal",
   variable: "--font-dance-partner",
   display: "block",
 });
 
 const involveMedium = localFont({
-  src: "../fonts/involve_medium.woff2",
+  src: "/fonts/involve_medium.woff2",
   variable: "--font-involve-medium",
   display: "block",
+  weight: "500",
 });
 
 export const metadata: Metadata = {

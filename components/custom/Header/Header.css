@@ -45,7 +45,7 @@
 
 .modal-menu__link {
   color: var(--rouge);
-  font-family: "Caveat", sans-serif;
+  font-family: var(--font-caveat), sans-serif;
   font-size: 18px;
   font-style: normal;
   line-height: normal;
